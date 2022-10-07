@@ -17,7 +17,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags')
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
-          image-ref: 'tykio/tyk-identity-broker:${{current_tag}}'
+          image-ref: 'tykio/tyk-identity-broker:${{tag}}'
           format: 'json'
           output: 'tyk-identity-broker.json'
           severity: 'CRITICAL,HIGH'
